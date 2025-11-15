@@ -157,15 +157,106 @@ footer{padding:18px 0;border-top:1px solid rgba(107,62,132,0.06);color:var(--mut
 }
 
 .card img {
-  width: 200px;
-  height: 200px;
+  width:300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.card img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+
+/* ======== SOMENTE PÁGINA CADASTRO ======== */
+
+/* Espaçamento correto no topo e no meio */
+body.cadastro-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ajusta o header apenas no cadastro */
+body.cadastro-page header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* Faz o conteúdo do cadastro ficar no centro vertical */
+body.cadastro-page main {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* Footer fica embaixo apenas no cadastro */
+body.cadastro-page footer {
+  margin-top: auto;
+  background: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* Mantém logo à esquerda e menu à direita */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+/* Garante que o menu vá para a direita */
+header nav {
+    margin-left: auto;
+}
+
+/* === Ajustes finais somente para a página cadastro === */
+
+body.cadastro-page .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+body.cadastro-page header nav {
+    margin-left: auto;
+}
+
+body.cadastro-page header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body.cadastro-page header nav ul li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--deep);
 }
